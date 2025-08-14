@@ -4,7 +4,7 @@
 
 {
     "name": "Location management (aka Better ZIP)",
-    "version": "14.0.1.2.5",
+    "version": "14.0.1.0.999",
     "depends": ["base_address_city", "contacts"],
     "author": (
         "Camptocamp,"

@@ -3,6 +3,9 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from lxml import etree
+import logging
+_logger = logging.getLogger(__name__)
+
 
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
@@ -119,7 +122,7 @@ class ResPartner(models.Model):
                     % (rec.name, rec.zip_id.name)
                 )
             if rec.zip_id.name != rec.zip:
-                raise ValidationError(
+                _logger.info(
                     _("The zip of the partner %s differs from that in location %s")
                     % (rec.name, rec.zip_id.name)
                 )
